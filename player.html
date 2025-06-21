@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatic Toll Plaza Project</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #dceefb);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .container {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section {
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .section:hover {
+      transform: scale(1.015);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-left: 20px;
+      line-height: 1.8em;
+    }
+    .fun-section {
+      background: #fffbe6;
+      color: #2d3436;
+      border-left: 10px solid #f1c40f;
+    }
+    .interact {
+      background: #dfe6e9;
+      border-left: 6px solid #0984e3;
+      padding: 18px;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    .buttons {
+      text-align: center;
+      margin: 40px auto;
+    }
+    .buttons button, .buttons a {
+      background: #1e3a8a;
+      color: white;
+      padding: 15px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .buttons button:hover, .buttons a:hover {
+      background: #2745ac;
+    }
+    .simulation {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px dashed #ccc;
+      border-radius: 15px;
+      background: #f0f8ff;
+    }
+    .car {
+      font-size: 2em;
+      display: inline-block;
+      animation: moveCar 4s linear infinite;
+    }
+    @keyframes moveCar {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(50%); }
+      100% { transform: translateX(100%); }
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 1.1em;
+      background: #0f2027;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚗 Automatic Toll Plaza using Arduino</h1>
+    <p><em>Smart Sensors | Real-time Automation | Fun Engineering Showcase</em></p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>🚀 Project Objective</h2>
+      <p>To simulate a smart toll booth using an ultrasonic sensor and servo motor that automates vehicle detection and gate operation, reducing manual effort and improving efficiency. This fun and interactive model shows how real-world toll systems work with sensors and motors!</p>
+    </div>
+
+    <div class="section">
+      <h2>🔧 Components Used</h2>
+      <ul>
+        <li>Arduino UNO (microcontroller brain)</li>
+        <li>Ultrasonic Sensor (HC-SR04) — for detecting vehicles</li>
+        <li>Servo Motor (SG90) — to lift the barrier</li>
+        <li>Breadboard & Jumper Wires — for easy circuit building</li>
+        <li>USB Cable / Battery Pack — power source</li>
+        <li>Cardboard — to design toll gate & road</li>
+        <li>Optional: LEDs (for signals), Buzzer (sound), IR Sensor</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>⚙️ Working Principle</h2>
+      <p>The ultrasonic sensor continuously checks the area in front of the toll gate. When a car or object comes closer than 10 cm, Arduino reads the sensor and triggers the servo motor. The boom barrier lifts automatically and lowers again after a short delay — just like a real toll booth!</p>
+    </div>
+
+    <div class="section">
+      <h2>🌍 Real-World Applications</h2>
+      <ul>
+        <li>National highway toll systems</li>
+        <li>Smart parking gates</li>
+        <li>Train/metro station smart gates</li>
+        <li>Warehouse and factory entrances</li>
+      </ul>
+    </div>
+
+    <div class="section fun-section">
+      <h2>🎉 Fun Facts & Interactions</h2>
+      <ul>
+        <li>🧪 Try replacing the ultrasonic sensor with an IR sensor — which one is faster?</li>
+        <li>🎨 Decorate your toll booth with signs, road paint, and flags for a creative touch!</li>
+        <li>🔊 Add a buzzer sound when the gate opens — make it feel real!</li>
+        <li>🧠 Think about other places where gates open automatically — can you name 5?</li>
+      </ul>
+      <div class="interact">
+        💡 Bonus Challenge: Add two LEDs — RED when gate is closed and GREEN when it opens. Flash the red LED just before it opens for extra drama!
+      </div>
+    </div>
+
+    <div class="section buttons">
+    <a href="Toll_Plaza_Project_Kritya.pdf" download>📄 Download Project PDF</a>
+      <button onclick="document.querySelector('.simulation').scrollIntoView({behavior: 'smooth'});">▶️ Start Live Demo</button>
+    </div>
+
+    <div class="section simulation">
+      <h2>🚘 Simple Simulation</h2>
+      <p>Watch the car approach the gate and imagine the sensor detecting it!</p>
+      <div class="car">🚗💨</div>
+    </div>
+  </div>
+
+  <footer>
+    🚧 Created by Kritya Shahi | Arduino Smart Toll Plaza Showcase 🚧
+  </footer>
+</body>
+</html>
